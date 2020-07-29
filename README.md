@@ -1,5 +1,5 @@
 # Checkers
-Collaboration between Kevin Xiu and I to code a Chess Game Project. 
+Collaboration between Kevin Xu and I to code a Chess Game Project. 
 
 Contents:
 - Board Class
