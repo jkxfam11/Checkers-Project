@@ -10,16 +10,8 @@ UI (Title Screen, Buttons, etc.)
 Board Movement (Rotation, etc.)
 Highlight which moves are legal?
 Add a confirm button, resign button, offer draw button
+
 What we do know or can figure out:
-8x8 Board
-Multiplayer System (Same Device Playability)
-Piece Behavior/Rules
-Board Movement (Rotation, etc.)
-Highlight which moves are legal?
+
 
 What we don't know (Need to learn online):
-Alternate Square Colors
-Mouse Inputs/Player Interactions
-Game Window
-Game File Execution
-UI(Title Screen, Button, etc.)
