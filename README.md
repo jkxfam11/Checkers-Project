@@ -1,5 +1,5 @@
 # Checkers
-Collaboration between Kevin Xu and I to code a Checkers Game Project. 
+Collaboration between Kevin Xu and I(Harold) to code a Checkers Game Project. 
 
 Contents:
 - Board Class
