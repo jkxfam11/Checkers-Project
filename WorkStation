@@ -31,3 +31,4 @@ JFrame frame = new JFrame("Testing"); //Create the frame
 
 
 **Kevin's Section:**
+I think that we need to improt something for drawing panels, graphics, and Jframes, should we use java, like java.awt.* and java.util.*, to draw the 8x8 grid;
