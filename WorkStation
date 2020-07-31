@@ -33,3 +33,4 @@ JFrame frame = new JFrame("Testing"); //Create the frame
 **Kevin's Section:**
 I think that we need to improt something for drawing panels, graphics, and Jframes, should we use java, like java.awt.* and java.util.*, to draw the 8x8 grid;
 Should we make it so that the graphics screen is proportional to the laptop screen or should it be same size because that determies whether or not we need to add variables.
+So maybe DrawingPanel a = new DrawingPanel(800,600)? Graphics g=a.getGraphics?
