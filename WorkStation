@@ -8,6 +8,7 @@
 
 
 **Harold's Section:**
+
 So a while back I looked into how make a basic frame, and if we put this code into a main method it should run a window for us.
 
 JFrame frame = new JFrame("Testing"); //Create the frame
