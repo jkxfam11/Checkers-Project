@@ -1,1 +1,28 @@
+*Public Use:*
 
+
+
+
+
+
+
+
+Harold's Section:
+So a while back I looked into how make a basic frame, and if we put this code into a main method it should run a window for us.
+
+JFrame frame = new JFrame("Testing"); //Create the frame
+		//Set up the frame
+		frame.setVisible(true); //Visibility
+		frame.setPreferredSize(new Dimension(800,600)); //Create a dimension object to fit into the size of the window
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
+		frame.pack(); //Apply size changes
+
+		
+		JLabel label = new JLabel("This is practice code without looking at outside examples.");
+		label.setPreferredSize(new Dimension(200,100));
+		
+		frame.getContentPane().add(label,SwingConstants.CENTER);
+
+
+
+Kevin's Section:
