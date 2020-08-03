@@ -33,6 +33,9 @@ public class JFrame_Testing
 
 	}
 
+Checker Board Plan: During each players turns update the board image and player turn icon.
+
+Image p1 = panel.loadImage("p1.png"); //Makes the image object and is ready for use.
 
 
 
