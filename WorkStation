@@ -52,7 +52,13 @@ public class CheckersMain {
 		Graphics g = p.getGraphics();
 		p.setBackground(Color.BLACK);
 		g.setColor(Color.YELLOW);
-
+		int player1=0;
+		int player2;
+		if (player1==0){
+			g.drawString("P1", 50, 50);
+		} else{
+			g.drawString("", 50, 50);
+		}
 	}
 }
 // CSE 143, Homework 1, Rectangle-Rama
