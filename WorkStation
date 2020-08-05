@@ -59,6 +59,15 @@ public class CheckersMain {
 		} else{
 			g.drawString("", 50, 50);
 		}
+		void doResign() {
+            if (gameInProgress == false) {  // Should be impossible.
+                message.setText("There is no game in progress!");
+                return;
+            }
+            if (currentPlayer == WHITE)
+                gameOver("WHITE resigns.  BLACK wins.");
+            else
+                gameOver("BLACK resigns.  WHITE wins.");
 	}
 }
 // CSE 143, Homework 1, Rectangle-Rama
