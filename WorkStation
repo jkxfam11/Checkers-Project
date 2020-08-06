@@ -80,19 +80,19 @@ public class CheckersMain {
 		Graphics g = p.getGraphics();
 		p.setBackground(Color.BLACK);
 		g.setColor(Color.YELLOW);
-		int player1=0;
-		int player2;
-		if (player1==0){
+		int player=0; //0 == White/P1 1 == Black/P2
+		if (player==0){
 			g.drawString("P1", 50, 50);
 		} else{
-			g.drawString("", 50, 50);
+			g.drawString("P2", 50, 50);
 		}
-		void doResign() {
+		
+		public void doResign() {
             if (gameInProgress == false) {  // Should be impossible.
                 message.setText("There is no game in progress!");
                 return;
             }
-            if (currentPlayer == WHITE)
+            if (player == 0)
                 gameOver("WHITE resigns.  BLACK wins.");
             else
                 gameOver("BLACK resigns.  WHITE wins.");
