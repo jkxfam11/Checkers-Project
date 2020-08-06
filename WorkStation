@@ -100,6 +100,14 @@ public class CheckersMain {
             else
                 gameOver("BLACK resigns.  WHITE wins.");
 	}
+	if (currentPlayer == BLACK) {
+                currentPlayer = WHITE;
+                message.setText("WHITE:  Make your move.");
+            }
+            else {  
+                currentPlayer = BLACK;
+                message.setText("BLACK:  Make your move.");
+            }
 }
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
