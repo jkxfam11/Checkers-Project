@@ -120,6 +120,14 @@ public class CheckersMain {
             newGameButton.setDisable(true);
             resignButton.setDisable(false);
             drawBoard();
+    public void actionPerformed(ActionEvent evt) {
+         // Respond to user's click on one of the two buttons.
+      Object src = evt.getSource();
+      if (src == newGameButton)
+         doNewGame();
+      else if (src == resignButton)
+         doResign();
+   }
 }
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
