@@ -20,15 +20,15 @@ public class Board
 	public Board() //Default construction
 	{
 		//Create the Objects
-				DrawingPanel p = new DrawingPanel(700,500);
-				Graphics g = p.getGraphics();
-				Image p1B = p.loadImage(new File("Board.jpg")); 
+		DrawingPanel p = new DrawingPanel(700,500);
+		Graphics g = p.getGraphics();
+		Image p1B = p.loadImage(new File("Board.jpg")); 
 				
-				//Set the Colors
-				p.setBackground(Color.BLUE);
-				g.setColor(Color.BLACK);
-				
-				g.drawImage(p1B,100,0,p); //Makes the checker Board
+		//Set the Colors
+		p.setBackground(Color.BLUE);
+		g.setColor(Color.BLACK);
+		
+		g.drawImage(p1B,100,0,p); //Makes the checker Board
 				
 	}
 	
