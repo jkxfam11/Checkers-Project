@@ -10,7 +10,7 @@
 **Harold's Section:**
 
 So a while back I looked into how make a basic frame, and if we put this code into a main method it should run a window for us.
-
+//---------------------------------------------------------------OLD------------------------------------------------------------
 import java.awt.*;
 import javax.swing.*;
 
@@ -37,7 +37,32 @@ Checker Board Plan: During each players turns update the board image and player 
 
 Image p1 = panel.loadImage("p1.png"); //Makes the image object and is ready for use.
 
+//---------------------------------------------------------------NEW------------------------------------------------------------
+import java.awt.*;
+import java.io.*;
+import javax.swing.*;
 
+public class CheckersMain extends JFrame 
+{
+
+	public static void main(String[] args) 
+	{
+		//Create the Objects
+		DrawingPanel p = new DrawingPanel(700,500);
+		Graphics g = p.getGraphics();
+		Image p1B = p.loadImage(new File("Board.jpg")); 
+		
+		//Set the Colors
+		p.setBackground(Color.BLUE);
+		g.setColor(Color.BLACK);
+		
+		
+		g.drawImage(p1B,100,0,p);
+		
+		
+	}
+
+}
 
 
 **Kevin's Section:**
