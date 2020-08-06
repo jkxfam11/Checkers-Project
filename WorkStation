@@ -108,6 +108,18 @@ public class CheckersMain {
                 currentPlayer = BLACK;
                 message.setText("BLACK:  Make your move.");
             }
+	    void doNewGame() {
+            if (gameInProgress == true) {
+                    // This should not be possible, but it doesn't hurt to check.
+                message.setText("Finish the current game first!");
+                return;
+            }
+	    currentPlayer = BLACK;   // BLACK moves first.
+            message.setText("Black:  Make your move.");
+            gameInProgress = true;
+            newGameButton.setDisable(true);
+            resignButton.setDisable(false);
+            drawBoard();
 }
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
