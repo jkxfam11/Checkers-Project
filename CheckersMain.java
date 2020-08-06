@@ -10,6 +10,8 @@ import javax.swing.*;
 public class CheckersMain extends JFrame 
 {
 	public int currentPlayer = 0; //0 == WHITE/P1   1 = BLACK/P2
+	//private static int final 
+	//int white = 0; int black =1;
 	public int currentTurn; //Counts the turns, can be displayed at the upper right
 	
 	public static void main(String[] args) 
