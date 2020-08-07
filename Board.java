@@ -11,11 +11,11 @@ import javax.swing.*;
 public class Board 
 {
 //VARIABLES
-	public int currentPlayer; //0 == BLACK/P1   1 = RED/P2
-	public int currentTurn;
-	DrawingPanel p;
-	Graphics g;
-	
+	private int currentPlayer; //0 == BLACK/P1   1 = RED/P2
+	private int currentTurn;
+	private DrawingPanel p;
+	private Graphics g;
+	private Image p1B;
 //CONSTRUCTORS
 	public Board() //Default construction
 	{
@@ -25,17 +25,23 @@ public class Board
 		//Create the Window Objects
 		p = new DrawingPanel(700,500);
 		g = p.getGraphics();
-		Image p1B = p.loadImage(new File("CheckerBoard.jpg")); 
-				
+		p1B = p.loadImage(new File("CheckerBoard.jpg")); 
+		
+		p.setAlwaysOnTop(true);
+		
 		//Set the Colors
 		p.setBackground(Color.gray);
 		g.setColor(Color.BLACK);
-				
+		
 		g.drawImage(p1B,100,0,p); //Makes the checker Board
 		
+		//Set the Player Turn Display
 		g.drawRect(1, 18, 96, 35);
-		
 		displayPlayer(1,15);
+		
+		//Set the Current Turn Display
+		g.drawString("Turn: " + currentTurn, 615, 30);
+		
 	}
 	
 //METHODS
@@ -65,6 +71,24 @@ public class Board
 		currentTurn++;
 	}
 	
+	public void nextRound()
+	{
+		p.clear();
+		
+		nextTurn();
+		nextPlayer();
+		
+		g.drawImage(p1B,100,0,p); //Makes the checker Board
+		
+		//Set the Player Turn Display
+		g.drawRect(1, 18, 96, 35);
+		displayPlayer(1,15);
+		
+		//Set the Current Turn Display
+		g.drawString("Turn: " + currentTurn, 615, 30);
+		
+	}
+	
 //Misc. Methods
 	//Converts our binary player variable into a String at a given spot on the window.
 	public void displayPlayer(int x, int y)
@@ -81,7 +105,9 @@ public class Board
 			g.drawString("RED",x+33,y+27);
 			g.setColor(Color.BLACK);
 		}
+		
 	}
+	
 		
 	
 	
