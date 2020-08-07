@@ -128,6 +128,15 @@ public class CheckersMain {
       else if (src == resignButton)
          doResign();
    }
+   addMouseListener(this);
+      setFont(new  Font("Serif", Font.BOLD, 14));
+      resignButton = new Button("Resign");
+      resignButton.addActionListener(this);
+      newGameButton = new Button("New Game");
+      newGameButton.addActionListener(this);
+      message = new Label("",Label.CENTER);
+      board = new CheckersData();
+      doNewGame();
 }
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
