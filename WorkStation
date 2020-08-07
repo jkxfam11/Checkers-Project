@@ -70,7 +70,30 @@ public class CheckersMain extends JFrame
 
 }
 
+import java.awt.*;
 
+public class TestComponent extends JPanel {
+
+    private void drawString(Graphics g, String text, int x, int y) {
+        for (String line : text.split("\n"))
+            g.drawString(line, x, y += g.getFontMetrics().getHeight());
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        drawString(g, "hello\nworld", 20, 20);
+        g.setFont(g.getFont().deriveFont(20f));
+        drawString(g, "part1\npart2", 120, 120);
+    }
+
+    public static void main(String s[]) {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new TestComponent());
+        f.setSize(220, 220);
+        f.setVisible(true);
+    }
+}
 **Kevin's Section:**
 I think that we need to improt something for drawing panels, graphics, and Jframes, should we use java, like java.awt.* and java.util.*, to draw the 8x8 grid;
 Should we make it so that the graphics screen is proportional to the laptop screen or should it be same size because that determies whether or not we need to add variables.
