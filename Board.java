@@ -73,11 +73,13 @@ public class Board
 	
 	public void nextRound()
 	{
-		p.clear();
+		p.clear();//Clear the board
 		
-		nextTurn();
+		//Change turns and players
+		nextTurn(); 
 		nextPlayer();
 		
+		//Refresh everything
 		g.drawImage(p1B,100,0,p); //Makes the checker Board
 		
 		//Set the Player Turn Display
