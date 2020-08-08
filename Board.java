@@ -1,12 +1,12 @@
-import java.awt.*;
-import java.io.*;
-import javax.swing.*;
-
 /*
  * Authors: Harold Pham and Kevin Xu
  * Creation Date: 8/6/2020
  * File Details: Will be the Board class that constructs every new game and holds game data.
 */
+
+import java.awt.*;
+import java.io.*;
+import javax.swing.*;
 
 public class Board 
 {
@@ -40,7 +40,8 @@ public class Board
 		displayPlayer(1,15);
 		
 		//Set the Current Turn Display
-		g.drawString("Turn: " + currentTurn, 615, 30);
+		g.drawRect(601, 13, 97, 40);
+		g.drawString("Turn: " + currentTurn, 605, 38);
 		
 	}
 	
@@ -87,7 +88,8 @@ public class Board
 		displayPlayer(1,15);
 		
 		//Set the Current Turn Display
-		g.drawString("Turn: " + currentTurn, 615, 30);
+		g.drawRect(601, 13, 97, 40);
+		g.drawString("Turn: " + currentTurn, 605, 38);
 		
 	}
 	
@@ -109,9 +111,5 @@ public class Board
 		}
 		
 	}
-	
-		
-	
-	
 	
 }
