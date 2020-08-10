@@ -161,6 +161,20 @@ public class CheckersMain {
       board = new CheckersData();
       doNewGame();
 }
+void makeMove(int fromRow, int fromCol, int toRow, int toCol) {
+            board[toRow][toCol] = board[fromRow][fromCol];
+            board[fromRow][fromCol] = EMPTY;
+            if (fromRow - toRow == 2 || fromRow - toRow == -2) {
+                // The move is a jump.  Remove the jumped piece from the board.
+                int jumpRow = (fromRow + toRow) / 2;  // Row of the jumped piece.
+                int jumpCol = (fromCol + toCol) / 2;  // Column of the jumped piece.
+                board[jumpRow][jumpCol] = EMPTY;
+            }
+            if (toRow == 0 && board[toRow][toCol] == RED)
+                board[toRow][toCol] = RED_KING;
+            if (toRow == 7 && board[toRow][toCol] == BLACK)
+                board[toRow][toCol] = BLACK_KING;
+        }
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
 // A DrawingPanel object is a drawing surface for painting 2D graphics.
