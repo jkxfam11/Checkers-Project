@@ -4,7 +4,10 @@
  * File Detail: The file will handle the piece behaviors within the checkers game board alongside with game logic. 
  * 
  */
+
 import java.util.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Pieces 
 {
@@ -16,9 +19,11 @@ public class Pieces
 	
 	private int[][] board = new int[8][8]; //Defaults to empty spaces
 	
-	public Pieces()
+	public Pieces(Graphics g, DrawingPanel p)
 	{
+		
     //populate red's pieces
+		g.setColor(Color.red);
 		for(int r = 0; r < 2; r++)
 		{
 				if(r % 2 == 1) //if it is an odd row
@@ -26,7 +31,10 @@ public class Pieces
 					for(int c = 0; c < 8; c++)
 					{
 						if(c % 2 == 0)//then every even column space will have a piece
+						{
 							board[r][c] = 1;
+							g.drawOval(31*r, 31*c, 50, 50);
+						}
 					}
 				}
 				else if(r % 2 == 0) //if it is an even row
@@ -34,12 +42,16 @@ public class Pieces
 					for(int c = 0; c < 8; c++)
 					{
 						if(c % 2 == 1) //then every odd column space will have a piece
+						{
 							board[r][c] = 1;
+							g.drawOval(31*r, 31*c, 50, 50);
+						}
 					}
 				}	
 		}
 		
     //populate black's pieces
+		g.setColor(Color.black);
 		for(int r = 5; r < 8; r++) 
 		{
 				if(r % 2 == 1) //if it is an odd row
@@ -47,7 +59,10 @@ public class Pieces
 					for(int c = 0; c < 8; c++)
 					{
 						if(c % 2 == 0)//then every even column space will have a piece
+						{
 							board[r][c] = 2;
+							g.drawOval(31*r, 31*c, 50, 50);
+						}
 					}
 				}
 				else if(r % 2 == 0) //if it is an even row
@@ -55,7 +70,10 @@ public class Pieces
 					for(int c = 0; c < 8; c++)
 					{
 						if(c % 2 == 1) //then every odd column space will have a piece
+						{
 							board[r][c] = 2;
+							g.drawOval(31*r, 31*c, 50, 50);
+						}
 					}
 				}	
 		}
