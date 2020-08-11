@@ -10,9 +10,13 @@ Partially Finished Functions:
 Currently WIP:
 - 
 
+Ideas:
+
 Checker Piece Centering: each space is 62x62, draw circle in center?
 
-
+Piece theory: Having an 8x8 array/collection to hold all the piece position data could prove useful. When switching to the other player's turn, 
+	            switch the array's/collection's orientation.
+ 
 **Harold's Section:**
 
 So a while back I looked into how make a basic frame, and if we put this code into a main method it should run a window for us.
