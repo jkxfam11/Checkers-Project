@@ -179,6 +179,16 @@ void makeMove(int fromRow, int fromCol, int toRow, int toCol) {
             if (toRow == 7 && board[toRow][toCol] == BLACK)
                 board[toRow][toCol] = BLACK_KING;
         }
+	if (player == RED) {
+         if (board[r1][c1] == RED && r2 > r1)
+             return false;  // Regualr red piece can only move down.
+          return true;  // The move is legal.
+      }
+      else {
+         if (board[r1][c1] == BLACK && r2 < r1)
+             return false;  // Regular black piece can only move up.
+          return true;  // The move is legal.
+      }
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
 // A DrawingPanel object is a drawing surface for painting 2D graphics.
