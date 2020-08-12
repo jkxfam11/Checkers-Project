@@ -155,6 +155,29 @@ public class CheckersMain {
       else if (src == resignButton)
          doResign();
    }
+   class CheckersCanvas extends Canvas implements ActionListener, MouseListener {
+
+  
+   Button resignButton;  
+   Button newGameButton;  
+                          
+   
+   Label message;  
+   
+   CheckersData board;  
+                      
+                      
+
+   boolean gameInProgress; 
+   
+   /* The next three variables are valid only when the game is in progress. */
+   
+   int currentPlayer;      
+                          
+   int selectedRow, selectedCol;                               
+                                 
+   CheckersMove[] legalMoves;  
+                             
    addMouseListener(this);
       setFont(new  Font("Serif", Font.BOLD, 14));
       resignButton = new Button("Resign");
