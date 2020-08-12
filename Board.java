@@ -43,6 +43,7 @@ public class Board
 		g.drawRect(601, 13, 97, 40);
 		g.drawString("Turn: " + currentTurn, 605, 38);
 		
+		Pieces pieces = new Pieces(g);
 	}
 	
 //METHODS
