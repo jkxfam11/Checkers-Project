@@ -13,6 +13,17 @@ public class CheckersMain extends JFrame
 
 	public static void main(String[] args) 
 	{
+		Board game = new Board();
+		
+		boolean b = false;
+		
+		while(b == false)
+		{
+			game.setSize(700,500);
+		}
+	}
+	
 
 
 }
+
