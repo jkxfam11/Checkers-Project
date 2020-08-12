@@ -43,7 +43,9 @@ public class Board
 		g.drawRect(601, 13, 97, 40);
 		g.drawString("Turn: " + currentTurn, 605, 38);
 		
-		Pieces pieces = new Pieces(g,p);
+		
+		
+		Pieces pieces = new Pieces(g);
 	}
 	
 //METHODS
@@ -103,14 +105,23 @@ public class Board
 		g.drawString("Your turn", x, y); //Note: It was easier to just use two separate msgs.
 		
 		if(currentPlayer == 0)
-			g.drawString("BLACK",x+23,y+26);
+		{
+			g.setColor(Color.white);
+			g.drawString("WHITE",x+23,y+26);
+			g.setColor(Color.black);
+		}
 		else
 		{
 			g.setColor(Color.RED);
 			g.drawString("RED",x+33,y+27);
-			g.setColor(Color.BLACK);
+			g.setColor(Color.black);
 		}
 		
+	}
+	
+	public void setSize(int x,int y)
+	{
+		p.setSize(x,y);
 	}
 	
 }
