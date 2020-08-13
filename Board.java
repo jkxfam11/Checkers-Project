@@ -8,7 +8,7 @@ import java.awt.*;
 import java.io.*;
 import javax.swing.*;
 
-public class Board 
+public class Board extends JPanel
 {
 //VARIABLES
 	private int currentPlayer; //0 == BLACK/P1   1 = RED/P2
@@ -46,6 +46,24 @@ public class Board
 		
 		
 		Pieces pieces = new Pieces(g);
+		/*
+		JButton button1 = new JButton("Button 1");
+	    JButton button2 = new JButton("Button 2");
+	    JButton button3 = new JButton("Button 3");
+	    JButton button4 = new JButton("Button 4");
+	    setLayout(new GridLayout(3, 3));
+        setSize(512, 512);
+        setOpaque(false);
+        add(button1);
+        add(new JLabel());
+        add(button2);
+        add(new JLabel());
+        add(new JLabel());
+        add(new JLabel());
+        add(button3);
+        add(new JLabel());
+        add(button4);
+		*/
 	}
 	
 //METHODS
