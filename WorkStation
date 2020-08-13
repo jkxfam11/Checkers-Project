@@ -56,6 +56,9 @@ p.addMouseListener(MouseListener listener);
 
 How to get "e" or "listener" because cannot instantiate or make.
 
+Read tmr: 
+https://www.tutorialspoint.com/awt/awt_event_handling.htm#:~:text=Event%20Handling%20is%20the%20mechanism,Model%20to%20handle%20the%20events.&text=Java%20provide%20as%20with%20classes%20for%20source%20object.
+https://www.studytonight.com/java/event-handling-in-java.php
 
 //---------------------------------------------------------------NEW------------------------------------------------------------
 import java.awt.*;
