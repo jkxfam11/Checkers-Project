@@ -1,4 +1,6 @@
 ** Public Use: **
+DrawingPanel.java Reference:
+https://www.buildingjavaprograms.com/code-files/4ed/javadoc/DrawingPanel.html
 
 Finished Functions:
 - Game Window
@@ -48,9 +50,10 @@ Checker Board Plan: During each players turns update the board image and player 
 Image p1 = panel.loadImage("p1.png"); //Makes the image object and is ready for use.
 
 Getting Mouse Events Ideas:
-
 onMouseClick(DrawingPanel.DPMouseEventHandler e)
 p.addMouseListener(MouseListener listener);
+
+How to get "e" or "listener" because cannot instantiate or make.
 
 
 //---------------------------------------------------------------NEW------------------------------------------------------------
