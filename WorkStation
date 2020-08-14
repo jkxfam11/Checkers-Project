@@ -206,6 +206,26 @@ public class CheckersMain {
       else if (src == resignButton)
          doResign();
    }
+   if (currentPlayer == CheckersData.RED) {
+         currentPlayer = CheckersData.BLACK;
+         legalMoves = board.getLegalMoves(currentPlayer);
+         if (legalMoves == null)
+            gameOver("BLACK has no moves.  RED wins.");
+         else if (legalMoves[0].isJump())
+            message.setText("BLACK:  Make your move.  You must jump.");
+         else
+            message.setText("BLACK:  Make your move.");
+      }
+      else {
+         currentPlayer = CheckersData.RED;
+         legalMoves = board.getLegalMoves(currentPlayer);
+         if (legalMoves == null)
+            gameOver("RED has no moves.  BLACK wins.");
+         else if (legalMoves[0].isJump())
+            message.setText("RED:  Make your move.  You must jump.");
+         else
+            message.setText("RED:  Make your move.");
+      }
    class CheckersCanvas extends Canvas implements ActionListener, MouseListener {
 
   
