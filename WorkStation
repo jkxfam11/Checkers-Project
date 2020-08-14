@@ -226,9 +226,7 @@ void makeMove(int fromRow, int fromCol, int toRow, int toCol) {
           return true;  // The move is legal.
       }
       void gameOver(String str) {
-          // The game ends.  The parameter, str, is displayed as a message
-          // to the user.  The states of the buttons are adjusted so playes
-          // can start a new game.
+          // The game ends. 
       message.setText(str);
       newGameButton.setEnabled(true);
       resignButton.setEnabled(false);
