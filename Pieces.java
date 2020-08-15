@@ -1,28 +1,37 @@
+package main;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.*;
 /*
  * Authors: Kevin Xu and Harold Pham
  * Creation Date: 8/11/2020
  * File Detail: The file will handle the piece behaviors within the checkers game board alongside with game logic. 
  * 
  */
-import java.util.*;
 
-public class Pieces 
+
+public class Pieces implements MouseListener
 {
 	private final int EMPTY = 0;
 	private final int RED = 1;
 	private final int WHITE = 2;
 	private final int RED_KING = 3;
-	private final int BLACK_KING = 4;
-	
+	private final int WHITE_KING = 4;
+	private Graphics g;
 	private int[][] board = new int[8][8]; //Defaults to empty spaces
 	
-	public Pieces(Graphics g, DrawingPanel p)
+	public Pieces(Graphics graphic) 
 	{
+		//Dimension controllers
 		int w = 107;
 		int h = 8;
-    //populate red's pieces
+		int ratio = 62;
+		g = graphic;
+	//Visual and Internal Piece Setup
+		
+		//populate red's pieces
 		g.setColor(Color.red);
 		for(int c = 0; c < 3; c++)
 		{
@@ -33,7 +42,7 @@ public class Pieces
 						if(r % 2 == 0)//then every even row space will have a piece
 						{
 							board[r][c] = 1;
-							g.fillOval(62*r+w, 62*c+h, 50, 50);
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
 						}
 					}
 				}
@@ -44,13 +53,13 @@ public class Pieces
 						if(r % 2 == 1) //then every odd row space will have a piece
 						{
 							board[r][c] = 1;
-							g.fillOval(62*r+w, 62*c+h, 50, 50);
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
 						}
 					}
 				}	
 		}
 		
-    //populate white's pieces
+		//populate white's pieces
 		g.setColor(Color.white);
 		for(int c = 5; c < 8; c++) 
 		{
@@ -61,7 +70,7 @@ public class Pieces
 						if(r % 2 == 0)//then every even row space will have a piece
 						{
 							board[r][c] = 2;
-							g.fillOval(62*r+w, 62*c+h, 50, 50);
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
 						}
 					}
 				}
@@ -72,11 +81,11 @@ public class Pieces
 						if(r % 2 == 1) //then every odd row space will have a piece
 						{
 							board[r][c] = 2;
-							g.fillOval(62*r+w, 62*c+h, 50, 50);
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
 						}
 					}
 				}	
-		}
+		 }
 		
 	}
 	
@@ -96,7 +105,45 @@ public class Pieces
             if (toRow == 0 && board[toRow][toCol] == RED)
                 board[toRow][toCol] = RED_KING;
             
-            if (toRow == 7 && board[toRow][toCol] == BLACK)
-                board[toRow][toCol] = BLACK_KING;
+            if (toRow == 7 && board[toRow][toCol] == WHITE)
+                board[toRow][toCol] = WHITE_KING;
         }
+	
+	//MouseListener methods
+		public void mouseClicked(MouseEvent e) 
+		{
+			if(e.getX() <= 250 && e.getY() <= 250)
+			{
+				g.drawString(":D", 1, 300);
+			}
+		}
+
+
+		public void mousePressed(MouseEvent e) 
+		{
+			
+			
+		}
+
+
+		public void mouseReleased(MouseEvent e) 
+		{
+			
+			
+		}
+	
+	
+		public void mouseEntered(MouseEvent e) 
+		{
+			
+			
+		}
+	
+	
+		public void mouseExited(MouseEvent e) 
+		{
+			
+			
+		}
+	
 }
