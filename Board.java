@@ -43,9 +43,15 @@ public class Board extends JPanel
 		g.drawRect(601, 13, 97, 40);
 		g.drawString("Turn: " + currentTurn, 605, 38);
 		
-		
-		
 		Pieces pieces = new Pieces(g);
+		
+		boolean b = false;
+		
+		while(b == false)
+		{
+			p.setSize(700,500);
+		}
+		
 		/*
 		JButton button1 = new JButton("Button 1");
 	    JButton button2 = new JButton("Button 2");
@@ -64,6 +70,7 @@ public class Board extends JPanel
         add(new JLabel());
         add(button4);
 		*/
+		
 	}
 	
 //METHODS
