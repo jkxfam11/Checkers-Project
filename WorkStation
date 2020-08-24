@@ -259,6 +259,19 @@ public class CheckersMain {
       board = new CheckersData();
       doNewGame();
 }
+ if (move.isJump()) {
+            legalMoves = board.getLegalJumpsFrom(currentPlayer,move.toRow,move.toCol);
+            if (legalMoves != null) {
+               if (currentPlayer == CheckersData.RED)
+                  message.setText("RED:  You must continue jumping.");
+               else
+                  message.setText("BLACK:  You must continue jumping.");
+               selectedRow = move.toRow;  // Since only one piece can be moved, select it.
+               selectedCol = move.toCol;
+               repaint();
+               return;
+            }
+         }
 void makeMove(int fromRow, int fromCol, int toRow, int toCol) {
             board[toRow][toCol] = board[fromRow][fromCol];
             board[fromRow][fromCol] = EMPTY;
