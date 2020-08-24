@@ -86,6 +86,16 @@ public class Board extends JPanel
 		return currentPlayer;
 	}
 	
+	public Graphics getG()
+	{
+		return g;
+	}
+	
+	public DrawingPanel getP()
+	{
+		return p;
+	}
+	
 //Mutator Methods
 	public void nextPlayer()
 	{
