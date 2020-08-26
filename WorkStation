@@ -98,6 +98,74 @@ An idea for mouse events:
 			
 			
 		}
+		
+Overhaul Idea:
+Make the Piece class hold all the event handling, and then in the Board class make an array which holds Piece objects and use that as a way to organize pieces.
+wWill have to manually create the Pieces in the Board class and then assign them to their given spots. 
+May be able to reuse some code to spread the pieces out (this code):
+		
+		//Dimension controllers
+		int w = 107;
+		int h = 8;
+		int ratio = 62;
+		g = graphic;
+	//Visual and Internal Piece Setup
+		
+		//populate red's pieces
+		g.setColor(Color.red);
+		for(int c = 0; c < 3; c++)
+		{
+				if(c % 2 == 1) //if it is an odd column
+				{
+					for(int r = 0; r < 8; r++)
+					{
+						if(r % 2 == 0)//then every even row space will have a piece
+						{
+							board[r][c] = 1;
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
+						}
+					}
+				}
+				else if(c % 2 == 0) //if it is an even column
+				{
+					for(int r = 0; r < 8; r++)
+					{
+						if(r % 2 == 1) //then every odd row space will have a piece
+						{
+							board[r][c] = 1;
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
+						}
+					}
+				}	
+		}
+		
+		//populate white's pieces
+		g.setColor(Color.white);
+		for(int c = 5; c < 8; c++) 
+		{
+				if(c % 2 == 1) //if it is an odd column
+				{
+					for(int r = 0; r < 8; r++)
+					{
+						if(r % 2 == 0)//then every even row space will have a piece
+						{
+							board[r][c] = 2;
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
+						}
+					}
+				}
+				else if(c % 2 == 0) //if it is an even column
+				{
+					for(int r = 0; r < 8; r++)
+					{
+						if(r % 2 == 1) //then every odd row space will have a piece
+						{
+							board[r][c] = 2;
+							g.fillOval(ratio*r+w, ratio*c+h, 50, 50);
+						}
+					}
+				}	
+		 }
 
 //---------------------------------------------------------------NEW------------------------------------------------------------
 import java.awt.*;
