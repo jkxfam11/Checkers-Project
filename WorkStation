@@ -11,7 +11,7 @@ Partially Finished Functions:
 - 
 
 Currently WIP:
-- 
+- Figuring out how to do pieces
 
 Ideas:
 
@@ -372,6 +372,7 @@ void makeMove(int fromRow, int fromCol, int toRow, int toCol) {
       resignButton.setEnabled(false);
       gameInProgress = false;
    }
+   
 // CSE 143, Homework 1, Rectangle-Rama
 // This provided class helps make it easier to draw the assignment's graphics.
 // A DrawingPanel object is a drawing surface for painting 2D graphics.
